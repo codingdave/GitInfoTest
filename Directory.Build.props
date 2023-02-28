@@ -1,0 +1,21 @@
+<Project>
+
+  <PropertyGroup>
+    <GitInfoReportImportance>low</GitInfoReportImportance>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- Have static class providing that information -->
+    <GitThisAssembly>true</GitThisAssembly>
+    <!-- The namespace for the static ThisAssembly class. 
+    Each project has its own instance so we need different namespaces such that different projects do not conflict with each other. -->
+    <ThisAssemblyNamespace>$(MSBuildProjectName)</ThisAssemblyNamespace>
+    <!-- Provide assembly metadata attributes for each of the populated values. -->
+    <GitThisAssemblyMetadata>false</GitThisAssemblyMetadata> 
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GitInfo" Version="3.0.4" PrivateAssets="all"/>
+  </ItemGroup>
+
+</Project>

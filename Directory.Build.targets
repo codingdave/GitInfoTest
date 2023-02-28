@@ -1,0 +1,12 @@
+<Project>
+	<Target Name="MessageBeforeBuild" BeforeTargets="BeforeBuild">
+		<Message Text="
+	BeforeBuild
+	MSBuildProjectName: $(MSBuildProjectName)
+	GitVersion: $(GitVersion)
+	GitThisAssembly: $(GitThisAssembly)
+	GitThisAssemblyMetadata: $(GitThisAssemblyMetadata)
+	ThisAssemblyNamespace: $(ThisAssemblyNamespace)
+	" Importance="high" />
+	</Target>
+</Project>
